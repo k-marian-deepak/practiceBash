@@ -1,3 +1,4 @@
 #!/bin/bash
 
-echo "Hello world, from Bash!"
+NAME="John Doe"
+echo "Hello ${NAME}, from Bash!"
