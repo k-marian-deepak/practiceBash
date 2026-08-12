@@ -16,5 +16,12 @@ done
 NAME="John Doe"
 echo -e "Hello ${NAME}, from Bash!\n"
 echo -e "Enter your name/names: bash practiceBash.sh \"John Doe\"\n"
-get_name "$@"
+
+if [[ -n "$1" ]]; then
+	get_name "$@"
+
+else
+	echo -e "Hello ${NAME}, from ${0}!\n"
+fi
+
 echo -e "Total arguments passed: ${#}\n"
