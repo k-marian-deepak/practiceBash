@@ -8,8 +8,9 @@ do not use single quotes inside this
 plus do notice how there is sapce in the begning of the single quote
 '
 get_name(){
+> greetings.txt
 for arg in "$@"; do
-	echo -e "Hello ${arg}, from ${0}!\n"
+	echo -e "Hello ${arg}, from ${0}!\n" >> greetings.txt
 done
 }
 
@@ -19,6 +20,7 @@ echo -e "Enter your name/names: bash practiceBash.sh \"John Doe\"\n"
 
 if [[ -n "$1" ]]; then
 	get_name "$@"
+	cat greetings.txt
 
 else
 	echo -e "Hello ${NAME}, from ${0}!\n"
