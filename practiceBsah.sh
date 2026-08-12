@@ -27,3 +27,4 @@ else
 fi
 
 echo -e "Total arguments passed: ${#}\n"
+> greetings.txt
